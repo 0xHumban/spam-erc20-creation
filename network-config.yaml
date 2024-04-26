@@ -1,0 +1,8 @@
+live:
+  - name: Base
+    networks:
+      - name: Base Sepolia (BlastAPI)
+        chainid: 84532
+        id: sepolia-base
+        host: https://base-sepolia.blastapi.io/YOUR_API
+        explorer: https://api-sepolia.basescan.org/api

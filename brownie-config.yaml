@@ -1,0 +1,34 @@
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+reports:
+  exclude_contracts:
+    - SafeMath
+
+# token info
+token-info:
+  name: "TEST NAME"
+  symbol: "SBL"
+  supply: 699999999999999999
+  decimals: 9
+
+
+# numbers used in the script
+numbers:
+  min_random_seconds: 5  # minimal seconds for the random time deploy
+  max_random_seconds: 10 # maximal seconds for the random time deploy
+  max_deploy_number: 2    # maximal number of contract to deploy in 1 execution
+  
+
+# the filename format is : "<json_filename>-d-m-Y-H-M-S.json"
+outputfile:
+  dirpath: "./addresses/"
+  json_filename: "addresses" # do not write the '.json' extension ! 
+
+
+# PRIVATE KEY used to deploy the contract
+# write a env variable: from_key: PRIVATE_KEY
+# to define an local env variable : 
+# ``export PRIVATE_KEY=YOUR_KEY``
+# a global env temp variable: add the export line to your ``.bashrc``
+wallets:
+  from_key: PRIVATE_KEY
